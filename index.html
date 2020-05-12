@@ -9,28 +9,102 @@
     <style>
         body {
             width: 90%;
+            min-height: 100vh;
             margin: 0 auto;
             margin-top: 1rem;
         }
         
         #text {
-            width: 100%;
+            width: 50%;
             height: 50vh;
+            background: transparent;
+            color: white;
+            font-size: 30px;
+            font-weight: 400;
+            border-radius: 10px;
+        }
+        
+        .harsh1 {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        
+        .engine {
+            margin-top: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            margin: 5px;
+            /* border: none; */
+            border-radius: 12px;
+            padding: 5px;
+            width: 80px;
+            font-size: 20px;
+        }
+        
+        label {
+            color: white;
+            font-size: 30px;
+            margin-right: 10px;
+            font-weight: 500;
+        }
+        
+        #text::placeholder {
+            color: white;
+            font-size: 30px;
+            font-weight: 400;
+        }
+        
+        input[type=number] {
+            border-radius: 12px;
+            width: 100px;
+            padding: 5px;
+            margin-right: 16px;
+        }
+        
+        .harsh1::before {
+            content: '';
+            background: url("programming.jpg") no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        .bg-light {
+            background: rgba(12, 123, 213);
         }
     </style>
     <script src="javascript.js" defer></script>
 </head>
 
 <body>
-    <!-- textarea tag for getting input -->
-    <textarea id="text"></textarea>
-    <!-- input tag for speed of speech -->
-    <label for="speed">Speed</label>
-    <input type="number" name="spee" id="speed" min=".5" max="3" step=".5" value="1">
-    <!-- button for play pause stop -->
-    <button id="play-button">Play</button>
-    <button id="pause-button">Pause</button>
-    <button id="stop-button">Stop</button>
+
+    <div class="harsh1">
+        <!-- textarea tag for getting input -->
+        <textarea id="text" placeholder="Type Something!"></textarea>
+        <!-- input tag for speed of speech -->
+        <div class="engine">
+            <label for="speed">Speed</label>
+            <input type="number" name="spee" id="speed" min=".5" max="3" step=".5" value="1">
+            <!-- button for play pause stop -->
+            <button id="play-button">Play</button>
+            <button id="pause-button">Pause</button>
+            <button id="stop-button">Stop</button>
+        </div>
+    </div>
 </body>
 
 </html>

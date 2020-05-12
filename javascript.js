@@ -39,7 +39,7 @@ function playText(text) {
 function pauseText() {
     if (speechSynthesis.speaking) speechSynthesis.pause()
 }
-
+// stop button scrpit
 function stopText() {
     speechSynthesis.resume()
     speechSynthesis.cancel()
